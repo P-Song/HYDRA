@@ -1,0 +1,202 @@
+
+
+
+-----------------------------------------------
+-----------------------------------------------
+0 input_7 (?, 1000, 1)
+1 block1_conv1 (?, 1000, 16)
+2 activation_75 (?, 1000, 16)
+3 block1_conv2 (?, 1000, 16)
+4 activation_76 (?, 1000, 16)
+5 conv1d_105 (?, 1000, 8)
+6 conv1d_106 (?, 1000, 8)
+7 reshape_105 (?, ?, 8)
+8 reshape_106 (?, ?, 8)
+9 dot_53 (?, ?, ?)
+10 conv1d_107 (?, 1000, 8)
+11 activation_77 (?, ?, ?)
+12 reshape_107 (?, ?, 8)
+13 dot_54 (?, ?, 8)
+14 reshape_108 (?, 1000, 8)
+15 conv1d_108 (?, 1000, 16)
+16 add_45 (?, 1000, 16)
+17 max_pooling1d_31 (?, 500, 16)
+18 block2_conv1 (?, 500, 32)
+19 activation_78 (?, 500, 32)
+20 block2_conv2 (?, 500, 32)
+21 activation_79 (?, 500, 32)
+22 add_46 (?, 500, 32)
+23 conv1d_109 (?, 500, 16)
+24 conv1d_110 (?, 500, 16)
+25 reshape_109 (?, ?, 16)
+26 reshape_110 (?, ?, 16)
+27 dot_55 (?, ?, ?)
+28 conv1d_111 (?, 500, 16)
+29 activation_80 (?, ?, ?)
+30 reshape_111 (?, ?, 16)
+31 dot_56 (?, ?, 16)
+32 reshape_112 (?, 500, 16)
+33 conv1d_112 (?, 500, 32)
+34 add_47 (?, 500, 32)
+35 max_pooling1d_32 (?, 250, 32)
+36 block3_conv1 (?, 250, 64)
+37 activation_81 (?, 250, 64)
+38 block3_conv2 (?, 250, 64)
+39 activation_82 (?, 250, 64)
+40 add_48 (?, 250, 64)
+41 conv1d_113 (?, 250, 32)
+42 conv1d_114 (?, 250, 32)
+43 reshape_113 (?, ?, 32)
+44 reshape_114 (?, ?, 32)
+45 dot_57 (?, ?, ?)
+46 conv1d_115 (?, 250, 32)
+47 activation_83 (?, ?, ?)
+48 reshape_115 (?, ?, 32)
+49 dot_58 (?, ?, 32)
+50 reshape_116 (?, 250, 32)
+51 conv1d_116 (?, 250, 64)
+52 add_49 (?, 250, 64)
+53 max_pooling1d_33 (?, 125, 64)
+54 block4_conv1 (?, 125, 128)
+55 activation_84 (?, 125, 128)
+56 block4_conv2 (?, 125, 128)
+57 activation_85 (?, 125, 128)
+58 add_50 (?, 125, 128)
+59 conv1d_118 (?, 125, 64)
+60 conv1d_117 (?, 125, 64)
+61 reshape_118 (?, ?, 64)
+62 reshape_117 (?, ?, 64)
+63 max_pooling1d_34 (?, ?, 64)
+64 conv1d_119 (?, 125, 64)
+65 dot_59 (?, ?, ?)
+66 reshape_119 (?, ?, 64)
+67 activation_86 (?, ?, ?)
+68 max_pooling1d_35 (?, ?, 64)
+69 dot_60 (?, ?, 64)
+70 reshape_120 (?, 125, 64)
+71 conv1d_120 (?, 125, 128)
+72 add_51 (?, 125, 128)
+73 global_average_pooling1d_7 (?, 128)
+74 dense_7 (?, 2)
+
+model.layers:
+
+[<keras.engine.input_layer.InputLayer at 0x7f6f9f945358>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f9453c8>,
+ <keras.layers.core.Activation at 0x7f6f9f945780>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f945630>,
+ <keras.layers.core.Activation at 0x7f6f9f945748>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f945940>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f945978>,
+ <keras.layers.core.Reshape at 0x7f6f9f945b38>,
+ <keras.layers.core.Reshape at 0x7f6f9f945d68>,
+ <keras.layers.merge.Dot at 0x7f6f9f945da0>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f945dd8>,
+ <keras.layers.core.Activation at 0x7f6f9f959080>,
+ <keras.layers.core.Reshape at 0x7f6f9f9590b8>,
+ <keras.layers.merge.Dot at 0x7f6f9f9590f0>,
+ <keras.layers.core.Reshape at 0x7f6f9f959128>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f959160>,
+ <keras.layers.merge.Add at 0x7f6f9f959390>,
+ <keras.layers.pooling.MaxPooling1D at 0x7f6f9f9593c8>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f959470>,
+ <keras.layers.core.Activation at 0x7f6f9f959748>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f959780>,
+ <keras.layers.core.Activation at 0x7f6f9f9599e8>,
+ <keras.layers.merge.Add at 0x7f6f9f959a20>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f959a58>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f959c88>,
+ <keras.layers.core.Reshape at 0x7f6f9f959eb8>,
+ <keras.layers.core.Reshape at 0x7f6f9f959ef0>,
+ <keras.layers.merge.Dot at 0x7f6f9f959f28>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f959f60>,
+ <keras.layers.core.Activation at 0x7f6f9f95f1d0>,
+ <keras.layers.core.Reshape at 0x7f6f9f95f208>,
+ <keras.layers.merge.Dot at 0x7f6f9f95f240>,
+ <keras.layers.core.Reshape at 0x7f6f9f95f278>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f95f2b0>,
+ <keras.layers.merge.Add at 0x7f6f9f95f4e0>,
+ <keras.layers.pooling.MaxPooling1D at 0x7f6f9f95f518>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f95f5c0>,
+ <keras.layers.core.Activation at 0x7f6f9f95f898>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f95f8d0>,
+ <keras.layers.core.Activation at 0x7f6f9f95fb38>,
+ <keras.layers.merge.Add at 0x7f6f9f95fb70>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f95fba8>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f95fdd8>,
+ <keras.layers.core.Reshape at 0x7f6f9f8e5048>,
+ <keras.layers.core.Reshape at 0x7f6f9f8e5080>,
+ <keras.layers.merge.Dot at 0x7f6f9f8e50b8>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f8e50f0>,
+ <keras.layers.core.Activation at 0x7f6f9f8e5320>,
+ <keras.layers.core.Reshape at 0x7f6f9f8e5358>,
+ <keras.layers.merge.Dot at 0x7f6f9f8e5390>,
+ <keras.layers.core.Reshape at 0x7f6f9f8e53c8>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f8e5400>,
+ <keras.layers.merge.Add at 0x7f6f9f8e5630>,
+ <keras.layers.pooling.MaxPooling1D at 0x7f6f9f8e5668>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f8e5710>,
+ <keras.layers.core.Activation at 0x7f6f9f8e59e8>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f8e5a20>,
+ <keras.layers.core.Activation at 0x7f6f9f8e5c88>,
+ <keras.layers.merge.Add at 0x7f6f9f8e5cc0>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f8e5cf8>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f8e5f28>,
+ <keras.layers.core.Reshape at 0x7f6f9f8ed198>,
+ <keras.layers.core.Reshape at 0x7f6f9f8ed1d0>,
+ <keras.layers.pooling.MaxPooling1D at 0x7f6f9f8ed208>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f8ed2b0>,
+ <keras.layers.merge.Dot at 0x7f6f9f8ed550>,
+ <keras.layers.core.Reshape at 0x7f6f9f8ed588>,
+ <keras.layers.core.Activation at 0x7f6f9f8ed5c0>,
+ <keras.layers.pooling.MaxPooling1D at 0x7f6f9f8ed5f8>,
+ <keras.layers.merge.Dot at 0x7f6f9f8ed6a0>,
+ <keras.layers.core.Reshape at 0x7f6f9f8ed6d8>,
+ <keras.layers.convolutional.Conv1D at 0x7f6f9f8ed710>,
+ <keras.layers.merge.Add at 0x7f6f9f8ed9b0>,
+ <keras.layers.pooling.GlobalAveragePooling1D at 0x7f6f9f8ed9e8>,
+ <keras.layers.core.Dense at 0x7f6f9f8eda58>]
+
+
+-----------------------------------------------
+layer = model.layers[i]
+print(i, layer.name, layer.output.shape)
+
+1 block1_conv1 (?, 1000, 16)
+3 block1_conv2 (?, 1000, 16)
+5 conv1d_105 (?, 1000, 8)
+6 conv1d_106 (?, 1000, 8)
+10 conv1d_107 (?, 1000, 8)
+15 conv1d_108 (?, 1000, 16)
+18 block2_conv1 (?, 500, 32)
+20 block2_conv2 (?, 500, 32)
+23 conv1d_109 (?, 500, 16)
+24 conv1d_110 (?, 500, 16)
+28 conv1d_111 (?, 500, 16)
+33 conv1d_112 (?, 500, 32)
+36 block3_conv1 (?, 250, 64)
+38 block3_conv2 (?, 250, 64)
+41 conv1d_113 (?, 250, 32)
+42 conv1d_114 (?, 250, 32)
+46 conv1d_115 (?, 250, 32)
+51 conv1d_116 (?, 250, 64)
+54 block4_conv1 (?, 125, 128)
+56 block4_conv2 (?, 125, 128)
+59 conv1d_118 (?, 125, 64)
+60 conv1d_117 (?, 125, 64)
+64 conv1d_119 (?, 125, 64)
+71 conv1d_120 (?, 125, 128)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
