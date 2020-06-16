@@ -1,0 +1,83 @@
+
+
+Figure 1:
+\caption{
+Relationship between key variables. The MR contrast matrix $\bX$ is associated with the k-space measurements $\bY$ per column by the subsampled Fourier transform. It is related to tissue parameters $\boldsymbol{\Theta}^{T12}$ per row by the Bloch equations. Given $\boldsymbol{\Theta}^{TRE}$ and $\bY$, the image stack $\bX$ is commonly first reconstructed from $\bY$, referred to as signature restoration, and then mapped to tissue parameters $\boldsymbol{\Theta}^{T12}$ via dictionary matching, referred to as parameter restoration.
+\label{Fig:XY}
+}
+
+
+Figure 2:
+\caption{
+Parameter restoration using dictionary matching. Given an inquiry temporal signature, dictionary matching computes its inner product with each dictionary entry, and selects the most correlated one with the highest inner product as the best matching signature. Once the best matching entry is found, it directly leads to multiple tissue parameters, such as T1, T2, simultaneously, via searching a lookup-table.
+\label{Fig:DictMatching}
+}
+
+Figure 3:
+\caption{
+Diagram of the proposed MRF reconstruction approach. During the training stage, synthesized dictionary entries are used as training signatures to train the designed 1D nonlocal residual CNN until the outputs approximate parameter values in $\mathbf{LUT}$ well. In this way, the network captures the signature-to-parameter mapping. During the testing stage, a low-rank based algorithm is used to restore the image stack, a matrix containing signatures in rows, from k-space measurements. Then the restored signatures are input into the trained network to obtain corresponding tissue parameters directly. 
+\label{Fig:ResNet-CNN}
+}
+
+Figure 4:
+\caption{
+Synthetic MRF temporal signatures with 200 time frames. (a) Temporal signatures corresponding to parameter values \{(T1, T2)\} ms = \{(800,40),(800,60),(800,80),(800,100)\} ms. (2) Temporal signatures corresponding to parameter values \{(T1, T2)\} ms = \{(400,80),(600,80),(800,80),(1000,80)\} ms.
+}
+
+Figure 5:
+\caption{
+FISP pulse sequence parameters. All the flip angles (FA) constituted a sinusoidal variation in the range of 0 - 70 degrees to ensure smoothly varying transient state of the magnetization. The repetition time (TR) was randomly varied in the range of 11.5 - 14.5 ms with a Perlin noise pattern.
+}
+
+Figure 6:
+\caption{
+Testing on synthetic dataset involving detailed T1 / T2 examples that are not on the training grid and their intervals are much smaller than the training grid intervals. Dictionary matching finds best adjacent values from the dictionary, i.e. 1001, 1011 for T1, and 501, 511 for T2. In contrast, owing to the captured mapping functions, neural networks output continuous values. Proposed HYDRA leads to the smallest deviations and bias.
+}
+
+Figure 7:
+\caption{
+Testing on the synthetic dataset for comparing parameter restoration performance. Subfig. (a) - (d) show the results using dictionary matching~\cite{ma2013magnetic,jiang2015mr,davies2014compressed,wang2016magnetic,mazor2016low,mazor2018low}, FNN~\cite{cohen2018mr}, CNN~\cite{hoppe2017deep} and HYDRA. In each subfigure, the left figure compares the estimated T1 or T2 values (marked with red dot) with groundtruth values (marked with blue line), and the right figure shows the deviations of the estimation from the groundtruth. Parameter mapping performance of HYDRA is much better than competing methods,  in the entire value range of T1 and T2 parameters, resulting in smaller deviations. 
+}
+
+Figure 8:
+\caption{
+Testing on the anatomical dataset with full k-space sampling for comparing parameter restoration performance. Subfig. (a) - (d) show the results using dictionary matching~\cite{ma2013magnetic,jiang2015mr,davies2014compressed,wang2016magnetic,mazor2016low,mazor2018low}, FNN~\cite{cohen2018mr}, CNN~\cite{hoppe2017deep} and HYDRA. Each subfigure shows the deviations of the estimation from the reference. Parameter mapping performance using HYDRA outperforms competing methods significantly, resulting in smaller deviations. The performance is also verified by quantitative metrics, as shown in Table~\ref{Tab:TestingPhantom}. 
+}
+
+Figure 9:
+\caption{
+\footnotesize
+Visual results of testing on anatomical dataset with full k-space sampling for comparing parameter restoration performance. Top two rows correspond to T1 maps and residual errors while bottom two rows correspond to T2 maps and residual errors. Proposed HYDRA results in comparable performance for T1 mapping and yields much better performance for T2 mapping, obtaining 10dB higher SNR gains than competing dictionary-matching based methods~\cite{ma2013magnetic,jiang2015mr,davies2014compressed,wang2016magnetic,mazor2016low,mazor2018low}. HYDRA also outperforms previous networks, such as CNN by Hoppe et al.~\cite{hoppe2017deep} and FNN by Cohen et al.~\cite{cohen2018mr}.
+}
+
+Figure 10:
+\caption{
+A series of Gaussian patterns used for k-space subsampling.
+}
+
+Figure 11:
+\caption{
+Testing on the anatomical dataset with k-space subsampling factor 15\% using Gaussian patterns and 1000 time frames. Subfig. (a) - (f) show the results using Ma et al.~\cite{ma2013magnetic}, BLIP~\cite{davies2014compressed}, FLOR~\cite{mazor2018low}, CNN by Hoppe et al.~\cite{hoppe2017deep}, FNN by Cohen et al.~\cite{cohen2018mr} and HYDRA.
+}
+
+Figure 12:
+\caption{
+Visual results of testing on anatomical dataset with k-space subsampling factor 15\% using Gaussian pattern with $L=1000$. Comparison between BLIP~\cite{davies2014compressed}, FLOR~\cite{mazor2018low}, CNN by Hoppe et al.~\cite{hoppe2017deep}, FNN by Cohen et al.~\cite{cohen2018mr} and HYDRA. 
+}
+
+Figure 13:
+\caption{
+A series of spiral trajectories for k-space subsampling.
+}
+
+Figure 14:
+\caption{
+\footnotesize
+Testing on the anatomical dataset with k-space subsampling factor 9\% using spiral trajectories and 1000 time frames. Subfig. (a) - (f) show the results using Ma et al.~\cite{ma2013magnetic}, BLIP~\cite{davies2014compressed}, FLOR~\cite{mazor2018low}, CNN by Hoppe et al.~\cite{hoppe2017deep}, FNN by Cohen et al.~\cite{cohen2018mr} and HYDRA.
+}
+
+Figure 15:
+\caption{
+Visual results of testing on anatomical dataset with k-space subsampling factor 9\% using spiral trajectories with $L=1000$. Comparison between BLIP~\cite{davies2014compressed}, FLOR~\cite{mazor2018low}, CNN by Hoppe et al.~\cite{hoppe2017deep}, FNN by Cohen et al.~\cite{cohen2018mr} and HYDRA. 
+}
+
